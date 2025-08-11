@@ -1,8 +1,4 @@
-/* main.css - Base styles, fonts, colors, layout */
-
-/* CSS Custom Properties */
 :root {
-  /* Colors */
   --color-primary: #1a365d;
   --color-primary-light: #2d3748;
   --color-secondary: #4a5568;
@@ -23,7 +19,6 @@
   --color-gray-800: #1a202c;
   --color-gray-900: #171923;
   
-  /* Typography */
   --font-family-primary: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
   --font-family-mono: "SF Mono", Monaco, "Cascadia Code", "Roboto Mono", Consolas, monospace;
   
@@ -41,7 +36,6 @@
   --font-weight-semibold: 600;
   --font-weight-bold: 700;
   
-  /* Spacing */
   --spacing-1: 0.25rem;
   --spacing-2: 0.5rem;
   --spacing-3: 0.75rem;
@@ -55,23 +49,19 @@
   --spacing-20: 5rem;
   --spacing-24: 6rem;
   
-  /* Shadows */
   --shadow-sm: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
   --shadow-base: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
   --shadow-md: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
   --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
   
-  /* Transitions */
   --transition-fast: 150ms ease;
   --transition-base: 250ms ease;
   --transition-slow: 350ms ease;
   
-  /* Layout */
   --max-width-container: 1200px;
   --header-height: 4rem;
 }
 
-/* Root elements */
 html {
   scroll-behavior: smooth;
 }
@@ -88,7 +78,6 @@ body {
   flex-direction: column;
 }
 
-/* Typography */
 h1, h2, h3, h4, h5, h6 {
   font-weight: var(--font-weight-bold);
   line-height: 1.2;
@@ -125,7 +114,6 @@ p {
   color: var(--color-gray-700);
 }
 
-/* Links */
 a {
   color: var(--color-accent);
   text-decoration: none;
@@ -141,7 +129,7 @@ a:focus-visible {
   outline-offset: 2px;
 }
 
-/* Buttons */
+
 .btn {
   display: inline-flex;
   align-items: center;
@@ -165,7 +153,6 @@ a:focus-visible {
   cursor: not-allowed;
 }
 
-/* Button variants */
 .btn-primary {
   color: var(--color-white);
   background-color: var(--color-primary);
@@ -209,7 +196,6 @@ a:focus-visible {
   border-color: #2f855a;
 }
 
-/* Button sizes */
 .btn-sm {
   padding: var(--spacing-2) var(--spacing-4);
   font-size: var(--font-size-sm);
@@ -222,7 +208,6 @@ a:focus-visible {
   min-height: 3.25rem;
 }
 
-/* Forms */
 .form-group {
   margin-bottom: var(--spacing-5);
 }
@@ -259,7 +244,6 @@ a:focus-visible {
   min-height: 6rem;
 }
 
-/* Error states */
 .form-input.error,
 .form-select.error,
 .form-textarea.error {
@@ -272,7 +256,6 @@ a:focus-visible {
   box-shadow: 0 0 0 3px rgba(229, 62, 62, 0.1);
 }
 
-/* Layout containers */
 .container {
   width: 100%;
   max-width: var(--max-width-container);
@@ -292,7 +275,6 @@ a:focus-visible {
   padding: 0 var(--spacing-4);
 }
 
-/* Grid system */
 .grid {
   display: grid;
   gap: var(--spacing-6);
@@ -303,7 +285,6 @@ a:focus-visible {
 .grid-cols-3 { grid-template-columns: repeat(3, 1fr); }
 .grid-cols-4 { grid-template-columns: repeat(4, 1fr); }
 
-/* Flexbox utilities */
 .flex {
   display: flex;
 }
@@ -328,7 +309,6 @@ a:focus-visible {
   flex: 1;
 }
 
-/* Spacing utilities */
 .mt-auto { margin-top: auto; }
 .mb-auto { margin-bottom: auto; }
 .m-0 { margin: 0; }
@@ -339,7 +319,6 @@ a:focus-visible {
 .pt-4 { padding-top: var(--spacing-4); }
 .pb-4 { padding-bottom: var(--spacing-4); }
 
-/* Text utilities */
 .text-center { text-align: center; }
 .text-left { text-align: left; }
 .text-right { text-align: right; }
@@ -352,25 +331,21 @@ a:focus-visible {
 .font-semibold { font-weight: var(--font-weight-semibold); }
 .font-bold { font-weight: var(--font-weight-bold); }
 
-/* Color utilities */
 .text-primary { color: var(--color-primary); }
 .text-secondary { color: var(--color-secondary); }
 .text-success { color: var(--color-success); }
 .text-error { color: var(--color-error); }
 .text-warning { color: var(--color-warning); }
 
-/* Background utilities */
 .bg-white { background-color: var(--color-white); }
 .bg-gray-50 { background-color: var(--color-gray-50); }
 .bg-gray-100 { background-color: var(--color-gray-100); }
 
-/* Shadow utilities */
 .shadow-sm { box-shadow: var(--shadow-sm); }
 .shadow { box-shadow: var(--shadow-base); }
 .shadow-md { box-shadow: var(--shadow-md); }
 .shadow-lg { box-shadow: var(--shadow-lg); }
 
-/* Responsive design */
 @media (max-width: 768px) {
   :root {
     --font-size-4xl: 2rem;
@@ -393,7 +368,6 @@ a:focus-visible {
   }
 }
 
-/* Accessibility */
 @media (prefers-reduced-motion: reduce) {
   * {
     animation-duration: 0.01ms !important;

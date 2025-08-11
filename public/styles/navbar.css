@@ -1,4 +1,3 @@
-/* navbar.css - Navigation styles */
 
 .navbar {
   position: sticky;
@@ -75,7 +74,6 @@
   outline-offset: 2px;
 }
 
-/* Active link indicator */
 .nav-link.active {
   color: var(--color-primary);
 }
@@ -90,7 +88,6 @@
   background-color: var(--color-primary);
 }
 
-/* User menu */
 .navbar-user {
   position: relative;
 }
@@ -178,7 +175,6 @@
   background-color: #fef2f2;
 }
 
-/* Logout button */
 #logoutBtn {
   display: flex;
   align-items: center;
@@ -198,7 +194,6 @@
   border-color: var(--color-error);
 }
 
-/* Mobile navigation */
 .navbar-mobile-toggle {
   display: none;
   flex-direction: column;
@@ -237,7 +232,6 @@
   transform: rotate(-45deg) translate(7px, -6px);
 }
 
-/* Mobile menu overlay */
 .navbar-mobile-menu {
   position: fixed;
   top: var(--header-height);
@@ -268,7 +262,6 @@
   font-size: var(--font-size-lg);
 }
 
-/* Responsive design */
 @media (max-width: 768px) {
   .navbar-nav {
     display: none;
@@ -287,7 +280,6 @@
   }
 }
 
-/* Breadcrumbs */
 .breadcrumbs {
   background-color: var(--color-gray-100);
   padding: var(--spacing-3) 0;

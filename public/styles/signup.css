@@ -1,4 +1,3 @@
-/* signup.css - Signup form styles */
 
 [data-page="signup"] {
   min-height: 100vh;
@@ -10,7 +9,6 @@
   overflow: hidden;
 }
 
-/* Background pattern */
 [data-page="signup"]::before {
   content: '';
   position: absolute;
@@ -25,7 +23,6 @@
   pointer-events: none;
 }
 
-/* Signup container */
 .signup-container {
   width: 100%;
   max-width: 480px;
@@ -60,7 +57,6 @@
   background: linear-gradient(90deg, var(--color-accent), var(--color-primary));
 }
 
-/* Signup header */
 .signup-header {
   text-align: center;
   padding: var(--spacing-4) var(--spacing-4) var(--spacing-4) var(--spacing-6);
@@ -88,7 +84,6 @@
   margin: 0;
 }
 
-/* Signup form */
 .signup-form {
   padding: var(--spacing-6);
 }
@@ -102,14 +97,12 @@
   margin-bottom: var(--spacing-8);
 }
 
-/* Multi-column form groups */
 .signup-form-row {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: var(--spacing-4);
 }
 
-/* Input labels */
 .signup-form-label {
   display: block;
   margin-bottom: var(--spacing-2);
@@ -126,7 +119,6 @@
   margin-left: var(--spacing-1);
 }
 
-/* Input fields */
 .signup-form-input {
   width: 100%;
   padding: var(--spacing-4);
@@ -148,7 +140,6 @@
   color: var(--color-gray-400);
 }
 
-/* Select styling */
 .signup-form-select {
   width: 100%;
   padding: var(--spacing-4);
@@ -171,7 +162,6 @@
   outline: none;
 }
 
-/* Input icons */
 .signup-input-wrapper {
   position: relative;
 }
@@ -191,7 +181,6 @@
   padding-left: calc(var(--spacing-4) + 1.25rem + var(--spacing-2));
 }
 
-/* Password toggle */
 .password-toggle {
   position: absolute;
   right: var(--spacing-4);
@@ -214,7 +203,6 @@
   height: 1.25rem;
 }
 
-/* Password strength indicator */
 .password-strength {
   margin-top: var(--spacing-2);
 }
@@ -274,7 +262,6 @@
   color: var(--color-success);
 }
 
-/* Terms and conditions */
 .terms-wrapper {
   display: flex;
   align-items: flex-start;
@@ -310,7 +297,6 @@
   color: var(--color-accent-hover);
 }
 
-/* Newsletter opt-in */
 .newsletter-wrapper {
   display: flex;
   align-items: center;
@@ -331,7 +317,6 @@
   cursor: pointer;
 }
 
-/* Signup button */
 .signup-btn {
   width: 100%;
   padding: var(--spacing-4);
@@ -386,7 +371,6 @@
   box-shadow: none;
 }
 
-/* Loading state */
 .signup-btn.loading {
   color: transparent;
 }
@@ -410,7 +394,6 @@
   100% { transform: translate(-50%, -50%) rotate(360deg); }
 }
 
-/* Progress steps */
 .signup-progress {
   display: flex;
   justify-content: space-between;
@@ -470,7 +453,6 @@
   font-weight: var(--font-weight-medium);
 }
 
-/* Divider */
 .signup-divider {
   position: relative;
   text-align: center;
@@ -496,7 +478,6 @@
   z-index: 1;
 }
 
-/* Social signup buttons */
 .social-signup-btn {
   width: 100%;
   display: flex;
@@ -530,7 +511,6 @@
   margin-right: var(--spacing-2);
 }
 
-/* Error and success messages */
 .signup-message {
   margin-bottom: var(--spacing-6);
   padding: var(--spacing-4);
@@ -559,7 +539,6 @@
   border-color: var(--color-warning);
 }
 
-/* Login link */
 .login-link-wrapper {
   text-align: center;
   padding: var(--spacing-6) var(--spacing-6) var(--spacing-8) var(--spacing-6);
@@ -584,7 +563,6 @@
   color: var(--color-accent-hover);
 }
 
-/* Field validation states */
 .signup-form-group.error .signup-form-input,
 .signup-form-group.error .signup-form-select {
   border-color: var(--color-error);
@@ -624,7 +602,6 @@
   gap: var(--spacing-1);
 }
 
-/* Form sections */
 .signup-form-section {
   padding-bottom: var(--spacing-6);
   border-bottom: 1px solid var(--color-gray-200);
@@ -653,7 +630,6 @@
   color: var(--color-accent);
 }
 
-/* Avatar upload */
 .avatar-upload {
   text-align: center;
   margin-bottom: var(--spacing-6);
@@ -698,7 +674,6 @@
   color: var(--color-white);
 }
 
-/* Responsive design */
 @media (max-width: 600px) {
   .signup-container {
     margin: var(--spacing-2);
@@ -734,14 +709,12 @@
   }
 }
 
-/* Print styles */
 @media print {
   [data-page="signup"] {
     display: none;
   }
 }
 
-/* High contrast mode */
 @media (prefers-contrast: high) {
   .signup-form-input,
   .signup-form-select {

@@ -1,4 +1,3 @@
-/* footer.css - Footer styles */
 
 .footer {
   background-color: var(--color-gray-900);
@@ -13,7 +12,6 @@
   padding: 0 var(--spacing-4);
 }
 
-/* Footer content grid */
 .footer-content {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -44,7 +42,6 @@
   background-color: var(--color-primary);
 }
 
-/* Footer brand */
 .footer-brand {
   display: flex;
   align-items: center;
@@ -68,7 +65,6 @@
   margin-bottom: var(--spacing-4);
 }
 
-/* Footer links */
 .footer-links {
   list-style: none;
   margin: 0;
@@ -99,7 +95,6 @@
   color: var(--color-primary);
 }
 
-/* Contact info */
 .footer-contact-item {
   display: flex;
   align-items: center;
@@ -114,7 +109,6 @@
   color: var(--color-primary);
 }
 
-/* Social media links */
 .footer-social {
   display: flex;
   gap: var(--spacing-4);
@@ -145,7 +139,6 @@
   height: 1.25rem;
 }
 
-/* Newsletter signup */
 .footer-newsletter {
   margin-top: var(--spacing-4);
 }
@@ -190,7 +183,6 @@
   border-color: var(--color-primary-light);
 }
 
-/* Footer bottom */
 .footer-bottom {
   border-top: 1px solid var(--color-gray-800);
   padding-top: var(--spacing-6);
@@ -225,7 +217,6 @@
   color: var(--color-white);
 }
 
-/* Footer divider */
 .footer-divider {
   width: 100%;
   height: 1px;
@@ -233,7 +224,6 @@
   margin: var(--spacing-8) 0;
 }
 
-/* Back to top button */
 .back-to-top {
   position: fixed;
   bottom: var(--spacing-6);
@@ -271,7 +261,6 @@
   height: 1.25rem;
 }
 
-/* Responsive design */
 @media (max-width: 768px) {
   .footer {
     padding: var(--spacing-8) 0 var(--spacing-6) 0;
@@ -302,7 +291,6 @@
   }
 }
 
-/* Print styles */
 @media print {
   .footer {
     display: none;

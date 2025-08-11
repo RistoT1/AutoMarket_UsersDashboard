@@ -1,11 +1,8 @@
-/* reset.css - Browser normalization and reset */
 
-/* Box sizing reset */
 *, *::before, *::after {
   box-sizing: border-box;
 }
 
-/* Remove default margins and padding */
 * {
   margin: 0;
   padding: 0;
@@ -102,7 +99,6 @@ input:-webkit-autofill:active {
   -webkit-text-fill-color: inherit !important;
 }
 
-/* Focus visible for accessibility */
 :focus-visible {
   outline: 2px solid #3182ce;
   outline-offset: 2px;

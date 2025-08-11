@@ -1,11 +1,9 @@
-/* carAdd.css - Add car form styles */
 
 [data-page="carAdd"] {
   min-height: 100vh;
   background: linear-gradient(135deg, var(--color-gray-50) 0%, var(--color-white) 100%);
 }
 
-/* Form container */
 .Container {
   max-width: 600px;
   margin: 0 auto;
@@ -46,21 +44,18 @@
   background-color: var(--color-primary);
 }
 
-/* Form styling */
 #carForm {
   display: flex;
   flex-direction: column;
   gap: var(--spacing-6);
 }
 
-/* Form groups */
 .form-group {
   display: flex;
   flex-direction: column;
   position: relative;
 }
 
-/* Labels */
 #carForm label {
   font-size: var(--font-size-sm);
   font-weight: var(--font-weight-semibold);
@@ -70,7 +65,6 @@
   letter-spacing: 0.025em;
 }
 
-/* Input fields */
 #carForm input[type="text"],
 #carForm input[type="number"],
 #carForm select,
@@ -93,7 +87,6 @@
   outline: none;
 }
 
-/* Select styling */
 #carForm select {
   appearance: none;
   background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6,9 12,15 18,9'%3e%3c/polyline%3e%3c/svg%3e");
@@ -103,7 +96,6 @@
   padding-right: var(--spacing-10);
 }
 
-/* Textarea specific */
 #carForm textarea {
   resize: vertical;
   min-height: 120px;
@@ -111,7 +103,6 @@
   line-height: 1.5;
 }
 
-/* File input styling */
 #carForm input[type="file"] {
   position: relative;
   padding: var(--spacing-4);
@@ -133,7 +124,6 @@
   outline: none;
 }
 
-/* File input wrapper */
 .file-input-wrapper {
   position: relative;
   overflow: hidden;
@@ -178,14 +168,12 @@
   margin-top: var(--spacing-1);
 }
 
-/* Form grid for related fields */
 .form-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: var(--spacing-4);
 }
 
-/* Submit button */
 #carForm button[type="submit"] {
   padding: var(--spacing-4) var(--spacing-8);
   font-size: var(--font-size-lg);
@@ -240,7 +228,6 @@
   box-shadow: none;
 }
 
-/* Message display */
 #message {
   margin-top: var(--spacing-6);
   padding: var(--spacing-4);
@@ -270,7 +257,6 @@
   border-color: var(--color-error);
 }
 
-/* Loading state */
 .form-loading {
   position: relative;
 }
@@ -297,7 +283,6 @@
   animation: spin 1s linear infinite;
 }
 
-/* Validation states */
 .form-field-error input,
 .form-field-error select,
 .form-field-error textarea {
@@ -330,14 +315,12 @@
   gap: var(--spacing-1);
 }
 
-/* Required field indicator */
 .required::after {
   content: '*';
   color: var(--color-error);
   margin-left: var(--spacing-1);
 }
 
-/* Form sections */
 .form-section {
   padding-bottom: var(--spacing-6);
   border-bottom: 1px solid var(--color-gray-200);
@@ -366,7 +349,6 @@
   color: var(--color-primary);
 }
 
-/* Progress indicator */
 .form-progress {
   display: flex;
   justify-content: space-between;
@@ -422,7 +404,6 @@
   text-align: center;
 }
 
-/* Responsive design */
 @media (max-width: 768px) {
   .Container {
     margin: var(--spacing-4);

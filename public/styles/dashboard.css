@@ -1,11 +1,9 @@
-/* dashboard.css - Dashboard and car listing styles */
 
 [data-page="dashboard"] {
     min-height: 100vh;
     background: linear-gradient(135deg, var(--color-gray-50) 0%, var(--color-gray-100) 100%);
 }
 
-/* Dashboard header */
 .dashboard-header {
     background-color: var(--color-white);
     border-bottom: 1px solid var(--color-gray-200);
@@ -32,7 +30,6 @@
     margin-top: var(--spacing-2);
 }
 
-/* Dashboard actions */
 .dashboard-actions {
     display: flex;
     align-items: center;
@@ -79,7 +76,6 @@
     transform: translateY(0);
 }
 
-/* Car container */
 .car-container {
     padding: var(--spacing-6) 0;
 }
@@ -91,7 +87,6 @@
     color: var(--color-white);
 }
 
-/* Car grid */
 .car-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
@@ -99,7 +94,6 @@
     margin-top: var(--spacing-6);
 }
 
-/* Car item */
 .car-item {
     background-color: var(--color-white);
     border: 1px solid var(--color-gray-200);
@@ -128,7 +122,6 @@
     box-shadow: var(--shadow-lg);
 }
 
-/* Car image */
 .car-image {
     position: relative;
     width: 100%;
@@ -162,7 +155,6 @@
     opacity: 1;
 }
 
-/* Car content */
 .car-content {
     padding: var(--spacing-6);
 }
@@ -211,7 +203,6 @@
     color: var(--color-gray-900);
 }
 
-/* Car price */
 .car-price {
     font-size: var(--font-size-2xl);
     font-weight: var(--font-weight-bold);
@@ -225,7 +216,6 @@
     vertical-align: top;
 }
 
-/* Car description */
 .car-description {
     color: var(--color-gray-600);
     font-size: var(--font-size-sm);
@@ -246,7 +236,6 @@
     background: linear-gradient(to right, transparent, var(--color-white));
 }
 
-/* Car actions */
 .car-actions {
     display: flex;
     gap: var(--spacing-3);
@@ -304,7 +293,6 @@
     background-color: var(--color-error);
 }
 
-/* Car stats */
 .car-stats {
     display: flex;
     justify-content: space-between;
@@ -334,7 +322,6 @@
     letter-spacing: 0.05em;
 }
 
-/* Empty state */
 .empty-state {
     text-align: center;
     padding: var(--spacing-20) var(--spacing-4);
@@ -380,7 +367,6 @@
     transform: translateY(-2px);
 }
 
-/* Loading state */
 .loading-spinner {
     display: flex;
     align-items: center;
@@ -407,7 +393,6 @@
     }
 }
 
-/* Filters and search */
 .dashboard-filters {
     background-color: var(--color-white);
     padding: var(--spacing-6);
@@ -478,7 +463,6 @@
     border-color: var(--color-primary-light);
 }
 
-/* Responsive design */
 @media (max-width: 768px) {
     .dashboard-header .container {
         flex-direction: column;
@@ -518,7 +502,6 @@
     }
 }
 
-/* Dark theme support */
 @media (prefers-color-scheme: dark) {
     [data-page="dashboard"] {
         background: linear-gradient(135deg, var(--color-gray-900) 0%, var(--color-gray-800) 100%);

@@ -1,0 +1,454 @@
+/* carAdd.css - Add car form styles */
+
+[data-page="carAdd"] {
+  min-height: 100vh;
+  background: linear-gradient(135deg, var(--color-gray-50) 0%, var(--color-white) 100%);
+}
+
+/* Form container */
+.Container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: var(--spacing-8);
+  background-color: var(--color-white);
+  border: 1px solid var(--color-gray-200);
+  box-shadow: var(--shadow-lg);
+  position: relative;
+}
+
+.Container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--color-primary), var(--color-accent));
+}
+
+.Container h2 {
+  text-align: center;
+  margin-bottom: var(--spacing-8);
+  color: var(--color-gray-900);
+  font-size: var(--font-size-3xl);
+  font-weight: var(--font-weight-bold);
+  position: relative;
+}
+
+.Container h2::after {
+  content: '';
+  position: absolute;
+  bottom: -var(--spacing-3);
+  left: 50%;
+  transform: translateX(-50%);
+  width: 4rem;
+  height: 2px;
+  background-color: var(--color-primary);
+}
+
+/* Form styling */
+#carForm {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-6);
+}
+
+/* Form groups */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+/* Labels */
+#carForm label {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-gray-700);
+  margin-bottom: var(--spacing-2);
+  text-transform: uppercase;
+  letter-spacing: 0.025em;
+}
+
+/* Input fields */
+#carForm input[type="text"],
+#carForm input[type="number"],
+#carForm select,
+#carForm textarea {
+  padding: var(--spacing-4);
+  font-size: var(--font-size-base);
+  color: var(--color-gray-900);
+  background-color: var(--color-white);
+  border: 2px solid var(--color-gray-300);
+  transition: all var(--transition-base);
+  position: relative;
+}
+
+#carForm input[type="text"]:focus,
+#carForm input[type="number"]:focus,
+#carForm select:focus,
+#carForm textarea:focus {
+  border-color: var(--color-accent);
+  box-shadow: 0 0 0 3px rgba(49, 130, 206, 0.1);
+  outline: none;
+}
+
+/* Select styling */
+#carForm select {
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6,9 12,15 18,9'%3e%3c/polyline%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right var(--spacing-3) center;
+  background-size: 1.25rem;
+  padding-right: var(--spacing-10);
+}
+
+/* Textarea specific */
+#carForm textarea {
+  resize: vertical;
+  min-height: 120px;
+  font-family: inherit;
+  line-height: 1.5;
+}
+
+/* File input styling */
+#carForm input[type="file"] {
+  position: relative;
+  padding: var(--spacing-4);
+  border: 2px dashed var(--color-gray-300);
+  background-color: var(--color-gray-50);
+  cursor: pointer;
+  transition: all var(--transition-base);
+  text-align: center;
+}
+
+#carForm input[type="file"]:hover {
+  border-color: var(--color-accent);
+  background-color: rgba(49, 130, 206, 0.05);
+}
+
+#carForm input[type="file"]:focus {
+  border-color: var(--color-accent);
+  box-shadow: 0 0 0 3px rgba(49, 130, 206, 0.1);
+  outline: none;
+}
+
+/* File input wrapper */
+.file-input-wrapper {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+.file-input-label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-8) var(--spacing-4);
+  border: 2px dashed var(--color-gray-300);
+  background-color: var(--color-gray-50);
+  cursor: pointer;
+  transition: all var(--transition-base);
+  text-align: center;
+}
+
+.file-input-label:hover {
+  border-color: var(--color-accent);
+  background-color: rgba(49, 130, 206, 0.05);
+}
+
+.file-input-icon {
+  width: 3rem;
+  height: 3rem;
+  color: var(--color-gray-400);
+  margin-bottom: var(--spacing-3);
+}
+
+.file-input-text {
+  color: var(--color-gray-600);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-medium);
+}
+
+.file-input-subtext {
+  color: var(--color-gray-500);
+  font-size: var(--font-size-sm);
+  margin-top: var(--spacing-1);
+}
+
+/* Form grid for related fields */
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-4);
+}
+
+/* Submit button */
+#carForm button[type="submit"] {
+  padding: var(--spacing-4) var(--spacing-8);
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-white);
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-accent) 100%);
+  border: 2px solid var(--color-primary);
+  cursor: pointer;
+  transition: all var(--transition-base);
+  text-transform: uppercase;
+  letter-spacing: 0.025em;
+  margin-top: var(--spacing-6);
+  position: relative;
+  overflow: hidden;
+}
+
+#carForm button[type="submit"]::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+  transition: left var(--transition-slow);
+}
+
+#carForm button[type="submit"]:hover::before {
+  left: 100%;
+}
+
+#carForm button[type="submit"]:hover {
+  background: linear-gradient(135deg, var(--color-primary-light) 0%, var(--color-accent-hover) 100%);
+  border-color: var(--color-primary-light);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+#carForm button[type="submit"]:active {
+  transform: translateY(0);
+}
+
+#carForm button[type="submit"]:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+#carForm button[type="submit"]:disabled:hover {
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-accent) 100%);
+  border-color: var(--color-primary);
+  box-shadow: none;
+}
+
+/* Message display */
+#message {
+  margin-top: var(--spacing-6);
+  padding: var(--spacing-4);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-medium);
+  text-align: center;
+  border: 1px solid transparent;
+  transition: all var(--transition-base);
+  opacity: 0;
+  transform: translateY(-10px);
+}
+
+#message:not(:empty) {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+#message.success {
+  color: var(--color-success);
+  background-color: #f0fff4;
+  border-color: var(--color-success);
+}
+
+#message.error {
+  color: var(--color-error);
+  background-color: #fef2f2;
+  border-color: var(--color-error);
+}
+
+/* Loading state */
+.form-loading {
+  position: relative;
+}
+
+.form-loading::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-loading .spinner {
+  width: 2rem;
+  height: 2rem;
+  border: 2px solid var(--color-gray-300);
+  border-top: 2px solid var(--color-primary);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+/* Validation states */
+.form-field-error input,
+.form-field-error select,
+.form-field-error textarea {
+  border-color: var(--color-error);
+  box-shadow: 0 0 0 3px rgba(229, 62, 62, 0.1);
+}
+
+.form-field-success input,
+.form-field-success select,
+.form-field-success textarea {
+  border-color: var(--color-success);
+  box-shadow: 0 0 0 3px rgba(56, 161, 105, 0.1);
+}
+
+.field-error-message {
+  color: var(--color-error);
+  font-size: var(--font-size-sm);
+  margin-top: var(--spacing-2);
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-1);
+}
+
+.field-success-message {
+  color: var(--color-success);
+  font-size: var(--font-size-sm);
+  margin-top: var(--spacing-2);
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-1);
+}
+
+/* Required field indicator */
+.required::after {
+  content: '*';
+  color: var(--color-error);
+  margin-left: var(--spacing-1);
+}
+
+/* Form sections */
+.form-section {
+  padding-bottom: var(--spacing-6);
+  border-bottom: 1px solid var(--color-gray-200);
+  margin-bottom: var(--spacing-6);
+}
+
+.form-section:last-of-type {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.form-section-title {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-gray-800);
+  margin-bottom: var(--spacing-4);
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+}
+
+.form-section-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  color: var(--color-primary);
+}
+
+/* Progress indicator */
+.form-progress {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: var(--spacing-8);
+  position: relative;
+}
+
+.form-progress::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background-color: var(--color-gray-300);
+  z-index: 1;
+}
+
+.progress-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--color-white);
+  padding: var(--spacing-2);
+  z-index: 2;
+  position: relative;
+}
+
+.progress-step-number {
+  width: 2rem;
+  height: 2rem;
+  background-color: var(--color-gray-300);
+  color: var(--color-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: var(--font-weight-semibold);
+  font-size: var(--font-size-sm);
+  margin-bottom: var(--spacing-2);
+}
+
+.progress-step.active .progress-step-number {
+  background-color: var(--color-primary);
+}
+
+.progress-step.completed .progress-step-number {
+  background-color: var(--color-success);
+}
+
+.progress-step-label {
+  font-size: var(--font-size-xs);
+  color: var(--color-gray-600);
+  text-align: center;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .Container {
+    margin: var(--spacing-4);
+    padding: var(--spacing-6);
+  }
+  
+  .Container h2 {
+    font-size: var(--font-size-2xl);
+  }
+  
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  #carForm button[type="submit"] {
+    padding: var(--spacing-4) var(--spacing-6);
+    font-size: var(--font-size-base);
+  }
+  
+  .form-progress {
+    flex-wrap: wrap;
+    gap: var(--spacing-2);
+  }
+  
+  .progress-step {
+    flex: 1;
+    min-width: 120px;
+  }
+}

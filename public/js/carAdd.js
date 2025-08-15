@@ -71,13 +71,10 @@ export const handleCarAdd = () => {
         const formData = new FormData(form);
         const csrfToken = document.querySelector('meta[name="csrf-token"]').getAttribute('content');
 
-        fetch('../api/insertCar.php', {
+        fetch('../api/InsertCar.php', {
             method: 'POST',
             body: formData,
-            headers: {
-                'X-CSRF-Token': csrfToken
-            },
-            credentials: 'include',
+            credentials: 'include'
         })
             .then(res => res.json())
             .then(data => {

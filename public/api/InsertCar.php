@@ -71,7 +71,7 @@ if (!in_array($extension, $allowedExts) || !in_array($mimeType, $allowedMimeType
 }
 
 // Upload directory
-$uploadDir = __DIR__ . '../../../src/uploads/';
+$uploadDir = __DIR__ . '/../../src/uploads/';
 if (!is_dir($uploadDir) && !mkdir($uploadDir, 0755, true)) {
     http_response_code(500);
     echo json_encode(['error' => 'Failed to create upload directory.']);

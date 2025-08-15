@@ -1,5 +1,6 @@
 // ../js/main.js
 const pageModules = {
+  index: () => import('./index.js').then(m => m.handleIndex()),
   login: () => import('./login.js').then(m => m.handleLogin()),
   dashboard: () => import('./dashboard.js').then(m => m.handleDashboard()),
     signup: () => import('./signup.js').then(m => m.handleSignup()),

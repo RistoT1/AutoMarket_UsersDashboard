@@ -7,7 +7,6 @@ if (!isset($_SESSION['csrf_token'])) {
 $current_page = basename($_SERVER['PHP_SELF']);
 $isLoggedIn = isset($_SESSION['user_id']);
 
-// Determine if we're in the pages folder
 $in_pages_folder = strpos($_SERVER['PHP_SELF'], '/pages/') !== false;
 ?>
 <meta name="csrf-token" content="<?= $_SESSION['csrf_token'] ?>">
@@ -20,7 +19,7 @@ $in_pages_folder = strpos($_SERVER['PHP_SELF'], '/pages/') !== false;
         <?php endif; ?>
 
         <ul class="navbar-nav">
-            <?php if ($isLoggedIn && $current_page != "index.php"): ?>
+            <?php if ($isLoggedIn): ?>
                 <li class="nav-item">
                     <?php if ($in_pages_folder): ?>
                         <a href="./dashboard.php"

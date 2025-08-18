@@ -1,6 +1,6 @@
 <?php
 header('Content-Type: application/json');
-require_once __DIR__ . "/../../src/config/db.php";  // safer with __DIR__
+require_once __DIR__ . "/../../src/config/db.php";  
 
 $response = [
     "success" => false,
@@ -15,8 +15,11 @@ $action = $_GET['action'] ?? '';
 
 try {
     if ($action === "foryou") {
-        $stmt = $pdo->prepare("SELECT * FROM cars ORDER BY id");
+        $limit = 20; 
+        $stmt = $pdo->prepare("SELECT * FROM cars ORDER BY id ASC LIMIT :limit");
+        $stmt->bindValue(':limit', $limit, PDO::PARAM_INT);
         $stmt->execute();
+
         $car_posts = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
         if ($car_posts) {

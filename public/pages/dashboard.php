@@ -5,7 +5,7 @@ if (empty($_SESSION['csrf_token'])) {
 }
 // Redirect to login if user not logged in 
 if (!isset($_SESSION['user_id'])) {
-    header("Location: ../pages/login.php");
+    header("Location: ../index.php");
     exit;
 }
 ?>

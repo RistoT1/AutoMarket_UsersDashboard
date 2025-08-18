@@ -24,6 +24,12 @@ export function handleIndex() {
                         const info = document.createElement('p');
                         info.textContent = `Car ID: ${car.id}, Brand: ${car.brand_id}, Model: ${car.model_id}, Year: ${car.year}, Price: ${car.price}`;
 
+                        // 🔹 Track interaction when car item is clicked
+                        div.addEventListener('click', () => {
+                            trackInteraction(car.id, 'click');
+                            console.log(`Interaction tracked for car ${car.id}`);
+                        });
+
                         div.appendChild(img);
                         div.appendChild(info);
                         fyp_container.appendChild(div);
@@ -37,6 +43,16 @@ export function handleIndex() {
                 console.error('Fetch error:', err);
                 fyp_container.textContent = 'Failed to load cars. Please try again later.';
             });
+
+    }
+
+    // 🔹 Function to send interaction to backend
+    function trackInteraction(carId, actionType) {
+        fetch('../public/api/trackInteraction.php', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ car_id: carId, action_type: actionType })
+        });
     }
 
     loadFyp();

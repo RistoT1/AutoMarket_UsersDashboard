@@ -1,6 +1,6 @@
 <?php
 header('Content-Type: application/json');
-require_once "../../src/config/db.php";
+require_once __DIR__ . "/../../src/config/db.php";  // safer with __DIR__
 
 $response = [
     "success" => false,
@@ -20,6 +20,14 @@ try {
         $car_posts = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
         if ($car_posts) {
+            foreach ($car_posts as &$car) {
+                if (!empty($car['image_filename'])) {
+                    $car['image_url'] = "/api/image.php?file=" . urlencode($car['image_filename']);
+                } else {
+                    $car['image_url'] = null;
+                }
+            }
+
             $response["success"] = true;
             $response["car_post"] = $car_posts;
             unset($response["error"]);

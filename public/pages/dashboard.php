@@ -1,6 +1,5 @@
 <?php
-session_start();
-// Generate CSRF token once per session if not already set 
+include_once '../includes/session.php';
 if (empty($_SESSION['csrf_token'])) {
     $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
 }

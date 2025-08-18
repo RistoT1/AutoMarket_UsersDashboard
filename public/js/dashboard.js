@@ -65,25 +65,4 @@ export const handleDashboard = () => {
       }
     })
     .catch(err => console.error('Fetch error:', err));
-
-  logoutBtn.addEventListener('click', () => {
-    fetch('../api/userLogout.php', {
-      method: 'POST',
-      credentials: 'include',
-      headers: {
-        'X-CSRF-Token': csrfToken
-      }
-    })
-      .then(response => response.json())
-      .then(data => {
-        if (data.success) {
-          window.location.href = '../pages/login.php';
-        } else {
-          alert('Logout failed, please try again.');
-        }
-      })
-      .catch(() => {
-        alert('Network error, please try again.');
-      });
-  });
 };

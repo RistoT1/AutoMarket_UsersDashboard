@@ -14,16 +14,6 @@
   position: relative;
 }
 
-.Container::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 4px;
-  background: linear-gradient(90deg, var(--color-primary), var(--color-accent));
-}
-
 .Container h2 {
   text-align: center;
   margin-bottom: var(--spacing-8);
@@ -36,10 +26,10 @@
 .Container h2::after {
   content: '';
   position: absolute;
-  bottom: -var(--spacing-3);
+  bottom: var(--spacing-8);
   left: 50%;
   transform: translateX(-50%);
-  width: 4rem;
+  width: 80%;
   height: 2px;
   background-color: var(--color-primary);
 }
@@ -287,7 +277,6 @@
 .form-field-error select,
 .form-field-error textarea {
   border-color: var(--color-error);
-  box-shadow: 0 0 0 3px rgba(229, 62, 62, 0.1);
 }
 
 .form-field-success input,
